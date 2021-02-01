@@ -12,7 +12,7 @@ function renderProjects() {
         return `
         <div class="col-md-4 col-sm-6 portfolio-item"> 
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-        <div onclick="renderModal(${proj.id})" class="portfolio-hover">
+        <div onclick="renderModal('${proj.id}')" class="portfolio-hover">
          <div class="portfolio-hover-content">
           <i class="fa fa-plus fa-3x"></i> 
           </div>
@@ -27,16 +27,17 @@ function renderProjects() {
         `
     })
     var strHtml = strHtmls.join('')
-    var $elProjContainer = $('.row')
+    var $elProjContainer = $('.proj')
     $elProjContainer.html(strHtml)
 
 }
 
 function renderModal(projId) {
     var proj = getProjById(projId);
+    console.log('proj', proj);
     var strHtml = `
 
-    div class="col-lg-8 mx-auto">
+    <div class="col-lg-8 mx-auto">
         <div class="modal-body">
             <h2>${proj.name}</h2>
             <p class="item-intro text-muted"${proj.title}</p>
@@ -53,8 +54,8 @@ function renderModal(projId) {
          </div>
     </div>
     `
-    strHtml.join('')
-    var $elProjContainer = $('.row')
+
+    var $elProjContainer = $('.proj-modal')
     $elProjContainer.html(strHtml)
 
 }
