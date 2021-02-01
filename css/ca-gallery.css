@@ -288,13 +288,14 @@ header.masthead .intro-text .intro-heading {
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 100%;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
     opacity: 0;
-    background: rgba(254, 209, 54, 0.9);
+    background: rgb(215, 123, 195);
+    background: linear-gradient(178deg, rgba(215, 123, 195, 0.43461134453781514) 3%, rgba(205, 100, 169, 0.4066001400560224) 76%);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -729,22 +730,22 @@ ul.social-buttons li a:hover {
 .btn-primary.focus,
 .btn-primary:focus {
     color: white;
-    border-color: #b48b01;
-    background-color: #fec503;
+    border-color: #e782d6;
+    background-color: #e782d6;
 }
 
 .btn-primary:hover {
     color: white;
-    border-color: #f6bf01;
-    background-color: #fec503;
+    border-color: #e782d6;
+    background-color: #e782d6;
 }
 
 .btn-primary.active,
 .btn-primary:active,
 .open>.btn-primary.dropdown-toggle {
     color: white;
-    border-color: #f6bf01;
-    background-color: #fec503;
+    border-color: #e782d6;
+    background-color: #e782d6;
 }
 
 .btn-primary.active.focus,
@@ -828,8 +829,8 @@ fieldset[disabled] .btn-primary:hover {
 .open>.btn-xl.dropdown-toggle:focus,
 .open>.btn-xl.dropdown-toggle:hover {
     color: white;
-    border-color: #b48b01;
-    background-color: #dcab01;
+    border-color: #e694d4;
+    background-color: #cda6d4;
 }
 
 .btn-xl.active,
