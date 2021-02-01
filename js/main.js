@@ -9,7 +9,7 @@ function renderProjects() {
     var projects = getProjects();
 
     var strHtmls = projects.map(function(proj) {
-        return `
+            return `
         <div class="col-md-4 col-sm-6 portfolio-item"> 
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
         <div onclick="renderModal('${proj.id}')" class="portfolio-hover">
@@ -17,7 +17,7 @@ function renderProjects() {
           <i class="fa fa-plus fa-3x"></i> 
           </div>
            </div>
-            <img class="img-fluid" src="img/mine-sweeper.png" >
+            <img class="img-fluid" src="${proj.imgUrl}" >
            </a> 
            <div class="portfolio-caption">
             <h4>${proj.name}</h4> 
@@ -25,10 +25,10 @@ function renderProjects() {
             </div>
              </div>
         `
-    })
-    var strHtml = strHtmls.join('')
+        })
+        // var strHtml = strHtmls.join('')
     var $elProjContainer = $('.proj')
-    $elProjContainer.html(strHtml)
+    $elProjContainer.html(strHtmls)
 
 }
 
@@ -58,4 +58,14 @@ function renderModal(projId) {
     var $elProjContainer = $('.proj-modal')
     $elProjContainer.html(strHtml)
 
+}
+
+function onSub(ev) {
+    ev.preventDefault();
+    var mail = $('.mail').val();
+    var subject = $('.subject').val();
+    var msg = $('.msg').val();
+
+    var url = `https://mail.google.com/mail/?view=cm&fs=1&to=${mail}&su=${subject}&body=${msg}`
+    window.open(url, "_blank");
 }
