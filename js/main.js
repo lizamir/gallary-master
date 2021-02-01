@@ -47,6 +47,7 @@ function renderModal(projId) {
                 <li>Date: ${proj.publishedAt}</li>
                 <li>Client: ${proj.client}</li>
                 <li>Category:${proj.category}</li>
+                <li>URL: ${proj.url}</li>
                     </ul>
             <button class="btn btn-primary" data-dismiss="modal" type="button">
             <i class="fa fa-times"></i>
@@ -60,7 +61,7 @@ function renderModal(projId) {
 
 }
 
-function onSub(ev) {
+function onSub(ev) { // onSubmit
     ev.preventDefault();
     var mail = $('.mail').val();
     var subject = $('.subject').val();
